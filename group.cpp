@@ -2,6 +2,13 @@
 #include <iostream>
 
 int* doubleArray (int* arr, int SIZE);
+double pizza (int people, int*pizzas, int*slices)
+  {
+    int totalSlices = people*3;
+    *pizzas = totalSlices/8;
+    *slices = totalSlices%8;
+    return *pizzas*11.95 + *slices*1.75;
+ }
 
 int main(int argc, char** argv){
 

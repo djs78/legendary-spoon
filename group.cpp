@@ -33,3 +33,46 @@ int* doubleArray(int* arr, int size)
    //return darr
    return darr;
 }
+
+
+
+/***************************************************************************/
+/* The isReverese function tests the values inside two arrays***************/
+/* This function checks over the first array and compares the values to the*/
+/* second array to see if the values in the second array are the same but***/
+/* lined up in a reverse order. ********************************************/
+/***************************************************************************/
+
+
+bool isReverse(int *array1, int *array2, int size1, int size2)
+{
+  
+	bool status = false;
+	int counter = 0;
+	int i = size2-1;
+	
+  //If the given array doesn't have the same size then
+  //the arrays wouldn't have the same values because
+  
+	if(size1 != size2)
+	{
+		cout << "The given array doesn't have the same size." << endl;
+		return status;
+	}
+	
+	for(int index = 0; index < size1; index++, i--)
+	{
+		if(*(array1+index) == *(array2+i))
+		{
+			counter++;
+		}
+	}
+	
+	
+	if(counter == size1)
+	{
+		status = true;
+	}
+	
+	return status;
+}

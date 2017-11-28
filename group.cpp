@@ -4,6 +4,8 @@
 int* doubleArray (int* arr, int SIZE); //Prototype for doubleArray
 bool isReverse(int *, int *,int , int); //Prototype for isReverse
 double pizza(int, int *, int *); //Prototype for pizza
+
+
 int main(int argc, char** argv){
 
   return 0;

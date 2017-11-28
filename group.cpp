@@ -76,3 +76,33 @@ bool isReverse(int *array1, int *array2, int size1, int size2)
 	
 	return status;
 }
+
+//*********************duplicateArray********************************
+//*duplicateArray: Works with the subArray function to perform 
+//what subarray does
+//
+//*array1- array
+//
+//returns: a duplicated array
+//*******************************************************************
+int *duplicateArray (int *arr, int size) {
+   int *newArray;
+   if (size <= 0)         //size must be positive
+      return NULL;        //NULL is 0, an invalid address
+   newArray = new int [size];  //allocate new array
+   for (int index = 0; index < size; index++)
+      newArray[index] = arr[index];  //copy to new array
+   return newArray;
+}
+//*************************SubArray***********************************
+//SubArray: created a new array that is a copy of the elements from the 
+//original array starting at the index, and has length
+//equal to the length arguement.
+//*arrray- the array
+//start - where the array starts or index of the array
+//length - the length of array
+//********************************************************************
+int *subArray (int *array, int start, int length) { 
+int *result = duplicateArray( array + start, length);
+    return result;
+}

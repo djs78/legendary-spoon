@@ -81,7 +81,7 @@ bool isReverse(int *array1, int *array2, int size1, int size2)
 		{
 			//Counter marks off the values that are similar.
 			//If the values are similar then counter will increment
-			//by one, if the value are not the same in the specified
+			//by one, if the value is not the same in the specified
 			//location then the counter will not increment.
 			counter++;
 		}

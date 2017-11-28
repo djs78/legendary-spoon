@@ -1,7 +1,16 @@
 
 #include <iostream>
 
-int* doubleArray (int* arr, int SIZE);
+int* doubleArray (int* arr, int SIZE); //Prototype for doubleArray
+bool isReverse(int *, int *,int , int); //Prototype for isReverse
+double pizza(int, int *, int *); //Prototype for pizza
+int main(int argc, char** argv){
+
+  return 0;
+
+}
+
+
 double pizza (int people, int*pizzas, int*slices)
   {
     int totalSlices = people*3;
@@ -10,11 +19,9 @@ double pizza (int people, int*pizzas, int*slices)
     return *pizzas*11.95 + *slices*1.75;
  }
 
-int main(int argc, char** argv){
 
-  return 0;
 
-}
+
 int* doubleArray(int* arr, int size)
 {
    //Create a dynamic array of double the size of integer array,arr

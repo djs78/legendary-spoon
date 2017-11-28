@@ -36,11 +36,11 @@ int* doubleArray(int* arr, int size)
 
 
 
-/***************************************************************************/
-/* The isReverese function tests the values inside two arrays***************/
-/* This function checks over the first array and compares the values to the*/
-/* second array to see if the values in the second array are the same but***/
-/* lined up in a reverse order. ********************************************/
+/**********************************Prompt***********************************/
+/*isReverse: takes two int arrays and the arrays’ sizes as arguments *******/
+/*(4 arguments). It should return true if the second array is equivalent to*/
+/*the first array in reverse order. Do not use square brackets anywhere in */
+/*the function, not even the parameter list (use pointers instead). ********/
 /***************************************************************************/
 
 
@@ -51,24 +51,37 @@ bool isReverse(int *array1, int *array2, int size1, int size2)
 	int counter = 0;
 	int i = size2-1;
 	
-  //If the given array doesn't have the same size then
-  //the arrays wouldn't have the same values because
-  
+	//If the given array doesn't have the same size then
+	//the arrays wouldn't have the same values. Since
+	//the values would be counted outside of the subscript.
 	if(size1 != size2)
 	{
 		cout << "The given array doesn't have the same size." << endl;
 		return status;
 	}
 	
-	for(int index = 0; index < size1; index++, i--)
-	{
-		if(*(array1+index) == *(array2+i))
+	//Iterate i-- so to traverse the array
+	//starting from the end all the way to the start.
+	//While i iterates backward, index iterates forwards
+	//starting from start of the array all the way to the end.
+	//This checks if the values in the 2nd array is in reverse order.
+	for(int index = 0; index < size1; index++, i--) 
+	{						
+		if(*(array1+index) == *(array2+i))	
 		{
+			//Counter marks off the values that are similar.
+			//If the values are similar then counter will increment
+			//by one, if the value are not the same in the specified
+			//location then the counter will not increment.
 			counter++;
 		}
 	}
 	
-	
+	//This checks to see if the values that are marked by counter
+	//is consistent with the size of the array.
+	//Meaning if the values for the 2nd array is organized in reverse order
+	//and the counter variable counted for all the values in the right order
+	//then the size of the array should be the same with counter.
 	if(counter == size1)
 	{
 		status = true;

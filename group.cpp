@@ -4,7 +4,8 @@
 int* doubleArray (int* arr, int SIZE); //Prototype for doubleArray
 bool isReverse(int *, int *,int , int); //Prototype for isReverse
 double pizza(int, int *, int *); //Prototype for pizza
-
+int *duplicateArray(int *, int); //Prototype for duplicateArry int *duplicateArray (int *arr, int size) 
+int *subArray (int *, int , int ); //Prototype for subArray
 
 int main(int argc, char** argv){
 
@@ -66,7 +67,7 @@ bool isReverse(int *array1, int *array2, int size1, int size2)
 	if(size1 != size2)
 	{
 		cout << "The given array doesn't have the same size." << endl;
-		return status;
+		return status;	//If array doesn't have the same size return status which is false.
 	}
 	
 	//Iterate i-- so to traverse the array

@@ -52,8 +52,6 @@ int* doubleArray(int* arr, int size)
 /*the first array in reverse order. Do not use square brackets anywhere in */
 /*the function, not even the parameter list (use pointers instead). ********/
 /***************************************************************************/
-
-
 bool isReverse(int *array1, int *array2, int size1, int size2)
 {
   
